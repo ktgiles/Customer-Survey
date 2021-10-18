@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<title>Customer Survey</title>
+
+<style>
+/*style for logo (currently at top of page)*/
+.logo {
+	float: center;
+	max-width: 80%;
+}
+/*style for form*/
+form {
+	background-color: lightblue;
+	padding: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+/*style for address (currently at bottom of page)*/
+address {
+	color: lightgray;
+}
+</style>
+</head>
+
+<body style="background-color:black;">
+	<ol>
+		<!-- place logo at top of page -->
+		<img class="logo" src="stark.png" alt="logo"</img>
+		<h1 style="color:lightblue;">Customer Experience Survey</h1>
+		<p><h3 style="color:lightblue; font-style:italic">Stark Industries: Providing Better Service for a Better Future.</p></h3>
+
+		<!-- create and populate form -->
+		<form name="survey" action="" method="post">
+		<p><h3>Please answer the following questions regarding  your salesperson.</p></h3>
+			<p>
+				<li>How did you meet with your salesperson?</li> 
+				<br>
+					<input type="radio" id="meeting-style-in-person" name="meeting_style" value="In Person.">
+					<label for="in-person">In Person</label>
+					<br>
+					<input type="radio" id="meeting-style-virtual" name="meeting_style" value="Virtually.">
+					<label for="virtual">Virtually</label>
+					<br>
+					<input type="radio" id="meeting-style-both" name="meeting_style" value="both In Person and Virtually.">
+					<label for="meeting-style-both">Both Virtually and In Person</label>
+				<br>
+				<br>
+				<li>What was your salesperson's name?</li>
+				<br>
+					<input type="text" id="sp-name" name="salesperson-name" size="50">
+				<br>
+				<br>
+				<li>How satisfied are you with your overall experience with this salesperson?</li>
+				<br>
+					<input type="radio" id="satisfaction-extremely" name="satisfaction" value="Extremely Satisfied">
+					<label for="satisfaction-extremely">Extremely Satisfied</label>
+					<br>
+					<input type="radio" id="satisfaction-very" name="satisfaction" value="Very Satisfied">
+					<label for="satisfaction-very">Very Satisfied</label>
+					<br>
+					<input type="radio" id="satisfaction-fairly" name="satisfaction" value="Fairly Satisfied">
+					<label for="satisfaction-fairly">Fairly Satisfied</label>
+					<br>	
+					<input type="radio" id="satisfaction-neutral" name="satisfaction" value="Neutral">
+					<label for="satisfaction-neutral">Neither Satisfied nor Unsatisfied</label>
+					<br>
+					<input type="radio" id="satisfaction-unsat" name="satisfaction" value="Unsatisfied">
+					<label for="satisfaction-unsat">Unsatisfied</label>
+				<br>	
+				<br>				
+				<li>How could your salesperson have improved your experience?</li>
+					<br>
+					<input type="text" id="sp-improvements" name="salesperson_suggestions" size="80">				
+				<br>
+				<br>
+			</p>
+
+			<p><h3>Please answer the following questions regarding the location you visited.</p></h3>
+			<p> 
+				<li>Which dealership location did you visit?</li>
+					<br>
+					<input type="radio" id="location-knox" name="location" value="Knoxville, TN">
+					<label for="location-knox">Knoxville, TN</label>
+					<br>
+					<input type="radio" id="location-bristol" name="location" value="Briston, TN">
+					<label for="location-bristol">Bristol, TN</label>
+					<br>
+					<input type="radio" id="location-asheville" name="location" value="Asheville, NC">
+					<label for="location-asheville">Asheville, NC</label>
+				<br>	
+				<br>
+				<li>Did the location you visited have the specific vehicle you were interested in?</li>
+				<br>
+					<input type="radio" id="inventory-yes" name="inventory" value="Yes">
+					<label for="inventory-yes">Yes</label>
+					<br>
+					<input type="radio" id="inventory-no" name="inventory" value="No">
+					<label for="inventory-no">No</label>
+					<br>
+					<input type="radio" id="inventory-na" name="inventory" value="Not Applicable">
+					<label for="inventory-na">I wasn't looking for a specific vehicle</label>
+				<br>	
+				<br>
+				<li>Did you feel the dealership environment was comfortable and relaxing? </li>
+					<br>
+					<input type="radio" id="environment-yes" name="environment" value="Yes">
+					<label for="environment-yes">Yes</label>
+					<br>
+					<input type="radio" id="environment-no" name="environment" value="No">
+					<label for="environment-no">No</label>
+				<br>
+				<br>
+				
+				<li>Do you have any comments related to the dealership environment?</li> 
+					<br>
+					<input type="text" id="env-comments" name="environment_suggestions" size="80">				
+				<br>
+				<br>
+			</p>
+
+			<p><h3>Please answer the following questions about your vehicle purchase.</p></h3>
+			<p>
+				<li>Please check all that apply:</li>
+					<br>
+					<input type="checkbox" id="past-purchase" name="purchase" value="you've purchased a vehicle from the dealership in the past">
+					<label for="past-purchase">I have purchased a vehicle from the dealership in the past</label>
+					<br>
+					<input type="checkbox" id="current-purchase" name="purchase" value="you purchased a vehicle from the dealership at your most recent visit">
+					<label for="current-purchase">I purchased a vehicle from the dealership at my most recent visit</label>
+					<br>
+					<input type="checkbox" id="planned-purchased" name="purchase" value="you are planning to purchase a vehicle from the dealership">
+					<label for="planned-purchase">I am planning to purchase a vehicle from the dealership</label>
+					<br>
+					<input type="checkbox" id="no-purchase" name="purchase" value="you do not plan on purchasing a vehicle from the dealership">
+					<label for="no-purchase">I do not plan to purchase a vehicle from the dealership</label>
+				<br>
+				<br>
+				<li>Did you use dealer financing for your purchase from this location?</li>
+					<br>
+					<input type="radio" id="financing-yes" name="financing" value="Yes">
+					<label for="financing-yes">Yes</label>
+					<br>
+					<input type="radio" id="financing-no" name="financing" value="No">
+					<label for="financing-no">No</label>
+					<br>
+					<input type="radio" id="financing-na" name="financing" value="Not Applicable">
+					<label for="financing-na">Not Applicable - I did not purchase from this location</label>
+				<br>
+				<br>	
+				<input id="subButt" style="background-color:green; margin: auto;" type="button" value="Submit Feedback" onclick="validateQs();"/>
+			</p>
+			</form>
+		</ol>	
+
+<!-- modal for results -->
+	<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background-color: black;">
+		<div class="modal-dialog">
+			<div class="modal-content" style="background-color:lightblue">
+				<div class="modal-header">
+					<h1>Survey Submitted!!</h1>
+				</div>
+				<!-- these paragraphs will be populated when function populateModal is called -->
+				<div class="modal-body">
+					<p id="result1"></p>
+					<p id="result2"></p>
+					<p id="result3"></p>
+					<p id="result4"></p>
+					<p id="result5"></p>
+					<p id="result6"></p>
+					<p id="result7"></p>
+					<p id="result8"></p>
+					<p id="result9"></p>
+					<p id="result10"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- address section (currently at bottom of page) -->
+	<address>
+		Contact us with more feedback at:
+		<br>
+		userexperience@starkindustries.com
+	</address>
+
+</body>
+
+<script>
+// this function prevents form submission until all answers are populated by user, alerts 
+// user to specific questions that are unanswered. 
+function validateQs() {
+	let checkQ1 = document.querySelector("[name=meeting_style]:checked");
+	let checkQ2 = document.getElementById("sp-name").value;
+	let checkQ3 = document.querySelector("[name=satisfaction]:checked");
+	let checkQ4 = document.getElementById("sp-improvements").value;
+	let checkQ5 = document.querySelector("[name=location]:checked");
+	let checkQ6 = document.querySelector("[name=inventory]:checked");
+	let checkQ7 = document.querySelector("[name=environment]:checked");
+	let checkQ8 = document.getElementById("env-comments").value;
+	let checkQ9 = document.querySelector("[name=purchase]:checked");
+	let checkQ10 = document.querySelector("[name=financing]:checked");
+	
+	if (!checkQ1) {
+		alert("Please respond to question 1");
+		return false;
+	}	
+
+	if (checkQ2.length == 0) {
+		alert("Please respond to question 2");
+		return false; 
+		}
+		
+	if (!checkQ3) {
+		alert("Please respond to question 3");
+		return false;
+	}		
+	
+	if (checkQ4.length == 0) {
+		alert("Please respond to question 4");
+		return false; 
+		}
+
+	if (!checkQ5) {
+		alert("Please respond to question 5"); 
+		return false;
+	}	
+
+	if (!checkQ6) {
+		alert("Please respond to question 6");
+		return false;
+	}	
+
+	if (!checkQ7) {
+		alert("Please respond to question 7");
+		return false;
+	}	
+	
+	if (checkQ8.length == 0) {
+		alert("Please respond to question 8");
+		return false; 
+		}
+
+	if (!checkQ9) {
+		alert("Please check at least one response for question 9");
+		return false;
+	}
+
+	if (!checkQ10) {
+		alert("Please respond to question 10");
+		return false;
+	 }
+	//when all questions are answered and form submitted, call populateModal method
+	populateModal(); 
+}
+
+// this function gets user answers from form submission and returns an array of variables containing answers
+function getAnswers() {
+	let answer1 = document.querySelector('input[name=meeting_style]:checked').value;
+	let answer2 = document.getElementById("sp-name").value
+	let answer3 = document.querySelector('input[name=satisfaction]:checked').value;
+	let answer4 = document.getElementById("sp-improvements").value
+	let answer5 = document.querySelector('input[name=location]:checked').value;
+	let answer6 = document.querySelector('input[name=inventory]:checked').value;
+	let answer7 = document.querySelector('input[name=environment]:checked').value;
+	let answer8 = document.getElementById("env-comments").value
+
+	var array = []
+	var checkboxes = document.querySelectorAll('input[name=purchase]:checked')
+	for (var i = 0; i < checkboxes.length; i++) {
+		array.push(checkboxes[i].value)
+	}
+	let answer9 = array.join(", ");
+	
+	let answer10 = document.querySelector('input[name=financing]:checked').value;
+	
+	return [answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10];	
+}
+
+// this function uses getAnswers to obtain user answers (in form of array) and uses data from array to
+// populate the modal with user answers
+function populateModal() {
+	let answers = getAnswers();
+	
+	document.getElementById('result1').innerHTML = "You met with your salesperson " + answers[0];
+	document.getElementById('result2').innerHTML = "Your salesperson's name was: " + answers[1];
+	document.getElementById('result3').innerHTML = "Your overall satisfaction with this salesperson was: " + answers[2];
+	document.getElementById('result4').innerHTML = "You gave the following feedback regarding potential improvement: " + answers[3];
+	document.getElementById('result5').innerHTML = "You visited our " + answers[4] + " location.";
+	document.getElementById('result6').innerHTML = "We had the vehicle you were interested in: " + answers[5];
+	document.getElementById('result7').innerHTML = "You felt the dealership environment was comfortable: " + answers[6];
+	document.getElementById('result8').innerHTML = "You gave the following feedback regarding the dealership environment: " + answers[7];
+	document.getElementById('result9').innerHTML = "Regarding vehicle purchase, you indicated that " + answers[8];
+	document.getElementById('result10').innerHTML = "You used dealer financing for your purchase: " + answers[9];
+	
+	//You said modals were fine, I tried everything I could to make this work without jQuery but... here we are
+	$("#resultsModal").modal("show"); 	//after populating the modal, show it
+}
+</script>
+</html>
